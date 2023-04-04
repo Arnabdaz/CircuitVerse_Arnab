@@ -42,6 +42,15 @@
               <div class="primary-checkpoint"></div>
             </label>
           </div>
+
+          <!-- New Simulator Toggle -->
+          <div class="field form-group users-edit-primary-checkpoint">
+            <label for="new_simulator_enabled" class="primary-checkpoint-container"><h6>Enable New Simulator</h6>
+              <%= f.check_box :new_simulator_enabled, checked: @profile.new_simulator_enabled?, id: "new_simulator_enabled" %>
+              <div class="primary-checkpoint"></div>
+            </label>
+          </div>
+
           <button type="submit" class="btn primary-button users-edit-primary-button"><%= t("save") %></button>
           <%= link_to t("back"), :back, class: "anchor-text" %>
         <% end %>

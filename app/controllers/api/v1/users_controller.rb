@@ -51,6 +51,6 @@ class Api::V1::UsersController < Api::V1::BaseController
 
     def user_params
       params.permit(:name, :locale, :educational_institute, :country, :subscribed,
-                    :profile_picture, :remove_picture)
-    end
+                    :profile_picture, :remove_picture, :new_simulator_enabled)
+    end    
 end

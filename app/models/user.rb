@@ -93,6 +93,14 @@ class User < ApplicationRecord
     )
   end
 
+  def update_new_simulator_feature_flag
+    if new_simulator_enabled
+      Flipper.enable_actor(:new_simulator, self)
+    else
+      Flipper.disable_actor(:new_simulator, self)
+    end
+  end
+
   def flipper_id
     "User:#{id}"
   end

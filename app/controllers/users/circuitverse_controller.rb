@@ -25,8 +25,17 @@ class Users::CircuitverseController < ApplicationController
     render json: typeahead_array
   end
 
+  # def update
+  #   if @profile.update(profile_params)
+  #     redirect_to user_projects_path(current_user)
+  #   else
+  #     render :edit
+  #   end
+  # end
+
   def update
     if @profile.update(profile_params)
+      @profile.update_new_simulator_feature_flag
       redirect_to user_projects_path(current_user)
     else
       render :edit
@@ -45,7 +54,7 @@ class Users::CircuitverseController < ApplicationController
 
     def profile_params
       params.require(:user).permit(:name, :profile_picture, :country, :educational_institute,
-                                   :subscribed, :locale, :remove_picture)
+                                   :subscribed, :locale, :remove_picture, :new_simulator_enabled)
     end
 
     def set_user

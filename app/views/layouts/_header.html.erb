@@ -17,7 +17,11 @@
         </div>
       </li>
       <li class="nav-item px-1">
+      <% if Flipper.enabled?(:new_simulator, current_user) %>
+        <a class="btn rounded-0 navbar-simulator-text" href="/simulatorvue"><%= t("layout.link_to_simulator") %></a>
+      <% else %>
         <a class="btn rounded-0 navbar-simulator-text" href="/simulator"><%= t("layout.link_to_simulator") %></a>
+      <% end %>  
       </li>
       <div class="navbar-nav nav-item dropdown">
         <li class="nav-item px-1">
