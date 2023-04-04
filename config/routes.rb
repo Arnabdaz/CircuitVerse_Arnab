@@ -121,6 +121,8 @@ Rails.application.routes.draw do
     get "/embed/:id", to: "simulator#embed", as: "simulator_embed"
   end
 
+  get '/simulatorvue/*path', to: 'vuesimulator#simulatorvue'
+
   scope "/testbench" do
     get "/", to: "testbench#creator", as: "testbench_creator"
   end
