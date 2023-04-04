@@ -89,7 +89,7 @@ GEM
     acts_as_votable (0.13.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    ahoy_matey (4.0.3)
+    ahoy_matey (4.2.1)
       activesupport (>= 5.2)
       device_detector
       safely_block (>= 0.2.1)
@@ -191,7 +191,7 @@ GEM
     css_parser (1.7.1)
       addressable
     date (3.3.3)
-    device_detector (1.0.7)
+    device_detector (1.1.0)
     devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
