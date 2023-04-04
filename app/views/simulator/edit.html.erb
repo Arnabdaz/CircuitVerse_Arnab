@@ -68,7 +68,11 @@
       <span class="projectName noSelect defaultCursor font-weight-bold" id="projectName">
           Untitled
       </span>
-
+      <% if user_signed_in? && @project %>
+      <a href="/simulatorvue/edit/<%= @project.id %>" class="btn primary-button projects-primary-button" style="background-color: #65b787">VueSimulator</a>
+      <% else %>
+      <a href="/simulatorvue" class="btn primary-button projects-primary-button" style="background-color: #65b787">VueSimulator</a>
+      <%end%>
       <ul class="nav navbar-nav noSelect pointerCursor pull-right account-btn">
         <li class="dropdown pull-right">
           <% if user_signed_in? %>

@@ -101,6 +101,7 @@
               <hr class="projects-horizontal-rule">
               <% if policy(@project).user_access? %>
                 <a href="<%= simulator_edit_path(@project) %>" class="btn primary-button projects-primary-button" target="_blank"><%= t("launch_simulator") %></a>
+                <a href="/simulatorvue/edit/<%= @project.id %>" class="btn primary-button projects-primary-button" target="_blank"><%= t("launch_simulator") %>(vue)</a>
               <% else %>
                 <a class="btn primary-button projects-self-embed-button" class="embed-trigger" href="#" data-target="#embed" data-toggle="modal">
                 <i class="fas fa-code"></i>
