@@ -225,7 +225,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faker (2.21.0)
+    faker (3.2.0)
       i18n (>= 1.8.11, < 2)
     faraday (2.7.1)
       faraday-net_http (>= 2.0, < 3.1)
@@ -436,6 +436,8 @@ GEM
     rack (2.2.6.4)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
+    rack-cors (2.0.1)
+      rack (>= 2.0.0)
     rack-protection (3.0.5)
       rack
     rack-test (2.1.0)
@@ -678,8 +680,8 @@ GEM
     zeitwerk (2.6.7)
 
 PLATFORMS
-  ruby
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   acts_as_votable (~> 0.13.2)
@@ -743,6 +745,7 @@ DEPENDENCIES
   puma (~> 6.1)
   pundit
   rack-attack
+  rack-cors
   rails (~> 7.0)
   rails-data-migrations
   rails-erd
